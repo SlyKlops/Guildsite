@@ -8,6 +8,8 @@
 	 border-style: solid;
 	 max-height: 300px;
 	 max-width: 1000px;
+	 min-width: 1000px;
+	 max-height: 300px;
 }
 
 .banners ul{
@@ -68,4 +70,8 @@
 	height:600px;
 	border-width:6px;
 	border-style: solid;
+}
+
+body {
+	background-color: red;
 }
