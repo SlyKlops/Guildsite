@@ -6,6 +6,7 @@
 	 left:10%;
 	 border-width: 6px;
 	 border-style: solid;
+	 max-height: 300px;
 }
 
 .banners ul{
