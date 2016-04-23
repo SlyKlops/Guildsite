@@ -8,4 +8,12 @@
 	 border-style: solid;
 }
 
+.banners ul{
+	list-style: none;
+	text-align: left;
+}
+
+.banners li{
+	display: inline;
+}
 
