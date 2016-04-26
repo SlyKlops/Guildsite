@@ -80,12 +80,9 @@
 	height:600px;
 	border-width:6px;
 	border-style: solid;
-<<<<<<< HEAD:web/resources/css/headers.css
 	background-color: #3973ac;
-=======
 	max-width: 1000px;
 	min-width: 1000px;
->>>>>>> origin/master:web/headers.css
 }
 
 body {
