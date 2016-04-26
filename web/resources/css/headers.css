@@ -48,24 +48,24 @@
 	margin-left:300px;
 }
 
+/*Bottom Left Table on Roster Page*/
 .nav{
 	text-align:center;
 	height: 300px;
 	position: relative;
-	left: 10%;
-	width: 30%;
+	margin-left: 100px;
 	float: left;
 	border-style: solid;
 	max-width: 500px;
 	min-width: 500px;
 }
 
+/*Bottom Right table on Roster page*/
 .section{
 	text-align: center;
 	float: right;
 	position: relative;
-	right: 30%;
-	width: 30%;
+	margin-right: 50px;
 	height: 300px;
 	border-style: solid;
 	max-width: 500px;
