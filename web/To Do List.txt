@@ -1,0 +1,12 @@
+To Do List
+	Functionality Stuff
+		-Register user functionality (PHP?)
+		-Login functionality (PHP?)
+		-JS = client-side(validation?)
+		-PHP = server-side(MySQL)
+	Passes Stuff
+		-Registraion submit- redirect to login
+		-create login page
+		-add validation to registration
+		-fix bottom table Roster page
+		-Aclcl? "cms"

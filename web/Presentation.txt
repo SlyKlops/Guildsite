@@ -1,0 +1,10 @@
+Presentation
+	Powerpoint 
+		-Why we came up with the idea?
+		-description of project
+		-who did what 
+		-challenges and how we overcame them 
+	Turn in
+		-description of project with code 
+		-who did what
+		-validation?
