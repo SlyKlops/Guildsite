@@ -3,13 +3,13 @@
 	text-align:center;
 	 width:75%;
 	 position:relative;
-	 left:10%;
 	 border-width: 6px;
 	 border-style: solid;
 	 max-height: 300px;
 	 max-width: 1000px;
 	 min-width: 1000px;
 	 max-height: 300px;
+	 margin: auto;
 }
 
 .banners ul{
@@ -28,12 +28,12 @@
 	text-align:center;
 	 width:75%;
 	 position:relative;
-	 left:10%;
 	 border-width: 6px;
 	 border-style: solid;
 	 max-width: 1000px;
 	 min-width: 1000px;
 	 background-color: #3973ac;
+	 margin: auto;
 
 }
 
@@ -76,13 +76,13 @@
 	text-align:center;
 	width: 75%;
 	position: relative;
-	left: 10%;
 	height:600px;
 	border-width:6px;
 	border-style: solid;
 	background-color: #3973ac;
 	max-width: 1000px;
 	min-width: 1000px;
+	margin: auto;
 }
 
 body {
@@ -102,7 +102,7 @@ body {
 }
 
 .container{
-	width: 75%;
-	margin:0 auto;
+	width: 100%;
+	
 
 }
