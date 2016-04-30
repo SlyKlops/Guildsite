@@ -91,6 +91,18 @@ body {
 	background-image: url(../images/backgroundbubbles.jpg););
 }
 
+.title{
+	text-align:center;
+	width:75%;
+	position:relative;
+	border-width: 6px;
+	border-style: solid;
+	max-width: 1000px;
+	min-width: 1000px;
+	
+	margin: auto;
+}
+
 .container{
 	width: 100%;
 	
