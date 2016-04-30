@@ -12,6 +12,13 @@
 	margin: auto;
 	background-image: url(../images/squishy.png);
 }
+.status{
+	text-align: right;
+	width:75%;
+	max-width: 1000px;
+	min-width: 1000px;
+	margin: auto;
+}
 /*Navigation Bar Divs*/
 .NavBar{
 	text-align:center;
