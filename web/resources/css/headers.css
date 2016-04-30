@@ -1,28 +1,54 @@
-
+/*Website Banner Div*/
 .banners{
 	text-align:center;
-	 width:75%;
-	 position:relative;
-	 border-width: 6px;
-	 border-style: solid;
-	 max-height: 300px;
-	 max-width: 1000px;
-	 min-width: 1000px;
-	 max-height: 300px;
-	 margin: auto;
+	width:75%;
+	position:relative;
+	border-width: 6px;
+	border-style: solid;
+	max-width: 1000px;
+	min-width: 1000px;
+	max-height: 250px;
+	min-height: 250px;
+	margin: auto;
+	background-image: url(../images/squishy.png);
+}
+/*Navigation Bar Divs*/
+.NavBar{
+	text-align:center;
+	width:75%;
+	position:relative;
+	border-width: 6px;
+	border-style: solid;
+	max-width: 1000px;
+	min-width: 1000px;
+	max-height: 250px;
+	margin: auto;
 }
 
-.banners ul{
+.NavBar ul{
 	list-style: none;
 	text-align: left;
 }
 
-.banners li{
+.NavBar li{
 	display: inline-block;
 	padding-left: 25px;
 	padding-right: 25px;
 
 }
+
+.NavButton {
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+}
+
 
 .fuckTabitha{
 	text-align:center;
@@ -48,30 +74,6 @@
 	margin-left:300px;
 }
 
-/*Bottom Left Table on Roster Page*/
-.nav{
-	text-align:center;
-	height: 300px;
-	position: relative;
-	margin-left: 100px;
-	float: left;
-	border-style: solid;
-	max-width: 500px;
-	min-width: 500px;
-}
-
-/*Bottom Right table on Roster page*/
-.section{
-	text-align: center;
-	float: right;
-	position: relative;
-	margin-right: 50px;
-	height: 300px;
-	border-style: solid;
-	max-width: 500px;
-	min-width: 500px;
-}
-
 .body{
 	text-align:center;
 	width: 75%;
@@ -87,18 +89,6 @@
 
 body {
 	background-image: url(../images/backgroundbubbles.jpg););
-}
-
-.NavButton {
-	background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-
 }
 
 .container{
