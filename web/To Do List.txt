@@ -6,7 +6,6 @@ To Do List
 		-PHP = server-side(MySQL)
 	Passes Stuff
 		-Registraion submit- redirect to login
-		-create login page
+		-edit profile button disable
 		-add validation to registration
-		-fix bottom table Roster page
 		-Aclcl? "cms"
