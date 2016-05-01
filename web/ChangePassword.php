@@ -10,7 +10,16 @@
 	<body>
 	<div class="container">
 	  <div class="wrapper">
-	  <div class="status"><p>Logged in as: </p></div>
+	<div class="status">
+		  	<p style="display: inline;">Logged in as:
+				<?php 
+					session_start();
+					$name = $_SESSION['username']; 
+					echo $name; 
+				?>
+				<a href="signout.php"><button><h6>Logout</h6></button></a>
+			</p>
+		</div>
 	<!-- Website Banner -->
 		<div class="banners"></div>
 		  
@@ -18,26 +27,26 @@
 	  <div class="NavBar">
 		  <ul><center>
 		  	<li>
-		  		<a href="Home.html">
+		  		<a href="Home.php">
 		  		<button class="NavButton">Home</button></a>
 	  		</li>
 		  	
 		  	<li>
-		  		<a href="Roster.html?">
+		  		<a href="Roster.php">
 		  		<button class="NavButton">Roster</button></a>
 		  	</li>
 
 		  	<li>
-		  		<a href="registrationpage.html">
+		  		<a href="registrationpage.php">
 		  		<button class="NavButton">Registration</button></a>
 		  	</li>
 
 		  	<li>
-		  		<a href="account.html">
+		  		<a href="account.php">
 		  		<button class="NavButton">Account</button></a>
 		  	</li>
 		  	<li>
-		  		<a href="loginpage.html">
+		  		<a href="loginpage.php">
 		  		<button class="NavButton">Login</button></a>
 		  	</li>
 		  </center></ul>
