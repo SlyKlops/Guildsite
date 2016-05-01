@@ -34,6 +34,7 @@
 
 		print("<p>Thanks for submitting your registration $uname!</p>
 			<p>You should be redirected to the login page shortly.</p>");
+		header('Location: loginpage.html');
 		die(); //Finish page
 	?>
 </body>
