@@ -1,11 +1,12 @@
 To Do List
 	Functionality Stuff
-		-Register user functionality (PHP?)
-		-Login functionality (PHP?)
+		-character page php
 		-JS = client-side(validation?)
 		-PHP = server-side(MySQL)
 	Passes Stuff
-		-Registraion submit- redirect to login
+		-code beautification
+		-error messages
+		-dummy data
 		-edit profile button disable
 		-add validation to registration
 		-Aclcl? "cms"
