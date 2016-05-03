@@ -1,20 +1,21 @@
-
-<!DOCTYPE html>
-<!-- processes information from registrationpage.html -->
-
 <html>
 	<head>
 		<title>Processing Form...</title>
 	</head>
 	
 	<body>
-		<?php 
-			$uname 	= $_POST["name"];
-			$uemail = $_POST["email"];
-			$upwd	= $_POST["dapassword"];
+		<?php
+			session_start(); 
+			$uname 	= $_SESSION['username'];
+			$cname	= $_POST['name'];
+			$ctitle = $_POST['title'];
+			$cclass	= $_POST['class'];
+			$clvl	= (int)$_POST['level'];
+			$chp	= (int)$_POST['hp'];
+			$crsc	= (int)$_POST['rsc'];
 
 			//Construct Query
-			$query 	= "CALL `Register_User`( '$uemail', '$uname', '$upwd' )";
+			$query 	= "CALL `Add_Character`( '".$uname."', '$cname', '$ctitle', '$cclass',".$clvl.", ".$chp.", ".$crsc." )";
 
 			//Connect to DB
 			if(!($database = mysql_connect("localhost", "root", "myserver95")))
@@ -33,7 +34,8 @@
 
 			print("<p>Thanks for submitting your registration $uname!</p>
 				<p>You should be redirected to the login page shortly.</p>");
-			header('Location: loginpage.php');
+			$_SESSION['characterName'] = $cname;
+			header('Location: CharacterPage.php');
 			die(); //Finish page
 		?>
 	</body>

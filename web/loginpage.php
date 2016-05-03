@@ -64,19 +64,26 @@
 										print("<p>Could not execute query!</p>");
 										die( mysql_error());
 									}
-									//$query=mysql_query("select * from user where name='".$name."' and password='".$pwd."'") or die(mysql_error());
+
 								   	$res=mysql_fetch_row($result);
 								   	if($res)
 								   	{
 								   		//session_start();
 								   	 	$_SESSION['username']=$uname;
-								   	 	$_SESSION['active_user']=TR;
-								    	header('location: Home.php');
+								   	 	$_SESSION['active_user']=TRUE;
+								    	//header('location: Home.php');
 								   	}
 								   	else
 								   	{
 								    	echo'The username or password you entered is incorrect';
 								   	}
+								   	$query = "CALL `Update_Activity`('$uname')";
+										if(!($result = mysql_query($query, $database)))
+										{
+											print("<p>Could not execute query!</p>");
+											die( mysql_error());
+										}
+										header('location: Home.php');
 								}
 								else
 								{

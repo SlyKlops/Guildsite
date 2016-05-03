@@ -44,6 +44,7 @@
 	min-width: 1000px;
 	max-height: 250px;
 	margin: auto;
+	background-image:url(../images/wood.jpe););
 }
 
 .NavBar ul{
@@ -70,6 +71,22 @@
 
 }
 
+button:disabled, button[disabled=disabled]{
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+.title {
+	background-color: #3973ac;
+}
 
 .Content{
 	text-align:center;
@@ -120,6 +137,7 @@
 	max-width: 1000px;
 	min-width: 1000px;
 	margin: auto;
+	overflow: auto;
 }
 
 body {
