@@ -8,6 +8,16 @@
  	</head> 
  
  	<body> 
+
+        <!-- Display Error Message if Anonymous User accidentally gets to page -->
+        <?php 
+            if($_SESSION['active_user']==FALSE){
+                session_start();
+                $_SESSION['errormsg']='You are not logged in!';
+                header('Location: errorpage.php');
+            }
+        ?>
+        
         <div class="container">
             <div class="wrapper">
                 
@@ -22,7 +32,7 @@
                 <!-- Navigation Bar -->
                 <div class="NavBar">
                     <!-- Include Navigation Bar -->
-                    <?php include 'navbar.html'; ?>
+                    <?php include 'navbar.php'; ?>
                 </div>
 
                 <div class="Content">
@@ -70,13 +80,9 @@
              		<p> 
              		   <a href="ChangePassword.php">
              		   <button>Change Password</button></a>
-             		</p>
                     <!-- Edit Profile Button -->
-            		<p> 
-                        <input type = "submit" value = "Edit Profile"> 
-                    </p>  
+                        <input type = "submit" value = "Edit Profile">  
                     <!-- Create Character Button -->
-                    <p> 
                         <a href="CreateCharacter.html">
                         <button>Create Character</button></a>
                     </p>   

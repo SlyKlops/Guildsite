@@ -20,7 +20,7 @@
         <!-- Navigation Bar -->
         <div class="NavBar">
             <!-- Include Navigation Bar -->
-            <?php include 'navbar.html'; ?>
+            <?php include 'navbar.php'; ?>
         </div>
 
     		<div class="title">
