@@ -55,6 +55,12 @@
 	  <div class="fuckTabitha">
 	  <h3>Message of the Day</h3>
 	  </div>
+	  <div class="fuckTabitha">
+	  	<table border="1" style="width: 100%;">
+	  		<thead>
+	  			<th>News Feed</th>
+	  		</thead>
+	  	</table>
 	  </div>
 	  </div>
 	</body>
