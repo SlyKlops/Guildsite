@@ -2,177 +2,148 @@
 
 <html>
 	<head>
-	  <meta charset = "utf-8">
-	  <title>Character Page</title>
-	  <link rel="stylesheet" type="text/css" href="resources/css/headers.css">
+		<meta charset = "utf-8">
+		<title>Character Page</title>
+		<link rel="stylesheet" type="text/css" href="resources/css/headers.css">
 	</head>
 
 	<body>
-	<div class="container">
-	<div class="wrapper">
-	<div class="status">
-		  	<p style="display: inline;">Logged in as:
-				<?php 
-					session_start();
-					$name = $_SESSION['username']; 
-					echo $name; 
-				?>
-				<a href="signout.php"><button><h6>Logout</h6></button></a>
-			</p>
-		</div>
-	  	<div class="banners"></div>
-	  
-	  	<!-- Begin Navigation Bar Section -->
-	  <div class="NavBar">
-		  <ul><center>
-		  	<li>
-		  		<a href="Home.php">
-		  		<button class="NavButton">Home</button></a>
-	  		</li>
-		  	
-		  	<li>
-		  		<a href="Roster.php">
-		  		<button class="NavButton">Roster</button></a>
-		  	</li>
+		<div class="container">
+			<div class="wrapper">
+				<!-- Include Status display message -->
+                <div class="status">
+                    <?php include "statusbar.php"; ?>
+                </div>
+                
+                <!-- Website banner image -->
+                <div class="banners"></div> 
+                
+                <!-- Navigation Bar -->
+                <div class="NavBar">
+                    <!-- Include Navigation Bar -->
+                    <?php include 'navbar.html'; ?>
+                </div>   	
+	   			
+	   			<!-- Character Table Div -->
+	   			<div class="fuckTabitha">
+	  				<table border="1" style="border: 5px solid black; width: 1000px">
+		  				<tbody>
+					  		<tr>
+					  			<td style="height: 15px; width: 100px; font-weight: bold">Character Name</td>
+					  			<td style = "width: 100px;">$filler</td>
 
-		  	<li>
-		  		<a href="registrationpage.php">
-		  		<button class="NavButton">Registration</button></a>
-		  	</li>
+					  			<th rowspan="10" style = "width: 500px; height: 500px;"><image src="resources/images/Whale_FullSize.png" alt="<Character Image>"></image>
+					  			</th>
+					  		</tr>
 
-		  	<li>
-		  		<a href="account.php">
-		  		<button class="NavButton">Account</button></a>
-		  	</li>
-		  	<li>
-		  		<a href="loginpage.php">
-		  		<button class="NavButton">Login</button></a>
-		  	</li>
-		  </center></ul>
-	  </div>
-	  <!-- End Navigation Bar -->
-	   	
-	   	<div class="fuckTabitha">
-	  	<table border="1" style="border: 5px solid black; width: 1000px">
-	  		<tbody>
-	  		<tr>
-	  			<td style="height: 15px; width: 100px; font-weight: bold">Character Name</td>
-	  			<td style = "width: 100px;">$filler</td>
+					  		<tr>
+					  			<th>Title</th>
+					  			<td>$filler</td>
+					  		</tr>
 
-	  			<th rowspan="10" style = "width: 500px; height: 500px;"><image src="resources/images/Whale_FullSize.png" alt="<Character Image>"></image>
-	  			</th>
-	  		</tr>
+					  		<tr>
+					  			<th>Class</th>
+					  			<td>$filler</td>
+					  		</tr>
 
-	  		<tr>
-	  			<th>Title</th>
-	  			<td>$filler</td>
-	  		</tr>
+					  		<tr>
+					  			<th>Level</th>
+					  			<td>$filler</td>
+					  		</tr>
 
-	  		<tr>
-	  			<th>Class</th>
-	  			<td>$filler</td>
-	  		</tr>
+					  		<tr>
+					  			<td colspan = "2"></td>
+					  		</tr>
 
-	  		<tr>
-	  			<th>Level</th>
-	  			<td>$filler</td>
-	  		</tr>
+					  		<tr>
+					  			<th>HP</th>
+					  			<td>$filler</td>
+					  		</tr>
 
-	  		<tr>
-	  			<td colspan = "2"></td>
-	  		</tr>
+					  		<tr>
+					  			<th>MP/WP/SP</th>
+					  			<td>$filler</td>
+					  		</tr>
 
-	  		<tr>
-	  			<th>HP</th>
-	  			<td>$filler</td>
-	  		</tr>
+					  		<tr>
+					  			<th>Skills?</th>
+					  			<td>$filler</td>
+					  		</tr>
 
-	  		<tr>
-	  			<th>MP/WP/SP</th>
-	  			<td>$filler</td>
-	  		</tr>
+					  		<tr>
+					  			<th>Production Lvls	?</th>
+					  			<td>$filler</td>
+					  		</tr>
+		  				</tbody>
+	  				</table>
+  				</div>
 
-	  		<tr>
-	  			<th>Skills?</th>
-	  			<td>$filler</td>
-	  		</tr>
+  				<!-- Featured Mount Div -->
+  				<div class="fuckTabitha">
+			  		<table border="1" style="border: 5px solid black; width: 1000px;">
+			  			<tbody>
+				  			<tr>
+				  				<th colspan="4">Featured Mount</th>
+				  				<td rowspan="9" style = "width: 50px; height: 50px;" ><image src="resources/images/Whale_FullSize.png" alt="<Character Image>"></image></td>
+				  			</tr>
 
-	  		<tr>
-	  			<th>Production Lvls	?</th>
-	  			<td>$filler</td>
-	  		</tr>
-	  		</tbody>
-	  	</table>
-  	</div>
+				  			<tr>
+				  				<th>Name:</th>
+				  				<td>$filler</td>
+				  				<th>Level:</th>
+				  				<td>$filler</td>
+				  			</tr>
 
-  	<div class="fuckTabitha">
-  		<table border="1" style="border: 5px solid black; width: 1000px;">
-  			<tbody>
-  			<tr>
-  				<th colspan="4">Featured Mount</th>
-  				<td rowspan="9" style = "width: 50px; height: 50px;" ><image src="resources/images/Whale_FullSize.png" alt="<Character Image>"></image></td>
-  			</tr>
+				  			<tr>
+				  				<th>Gender:</th>
+				  				<td>$filler</td>
+				  			</tr>
 
-  			<tr>
-  				<th>Name:</th>
-  				<td>$filler</td>
-  				<th>Level:</th>
-  				<td>$filler</td>
-  			</tr>
+				  			<tr>
+				  				<th>HP:</th>
+				  				<td>$filler</td>
+				  			</tr>
 
-  			<tr>
-  				<th>Gender:</th>
-  				<td>$filler</td>
-  			</tr>
+				  			<tr>
+				  				<th>Stamina:</th>
+				  				<td>$filler</td>
+				  			</tr>
+				  			<tr>
+				  				<th>Max Weight:</th>
+				  				<td>$filler</td>
+				  			</tr>
+				  			<tr>
+				  				<td colspan="4" ></td>
+				  			</tr>
 
-  			<tr>
-  				<th>HP:</th>
-  				<td>$filler</td>
-  			</tr>
+				  			<tr>
+				  				<th>Max Speed:</th>
+				  				<td>$filler</td>
+				  				<th>Turning:</th>
+				  				<td>$filler</td>
+				  			</tr>
 
-  			<tr>
-  				<th>Stamina:</th>
-  				<td>$filler</td>
-  			</tr>
-  			<tr>
-  				<th>Max Weight:</th>
-  				<td>$filler</td>
-  			</tr>
-  			<tr>
-  				<td colspan="4" ></td>
-  			</tr>
+				  			<tr>
+				  				<th>Acceleration:</th>
+				  				<td>$filler</td>
+				  				<th>Braking:</th>
+				  				<td>$filler</td>
+				  			</tr>
 
-  			<tr>
-  				<th>Max Speed:</th>
-  				<td>$filler</td>
-  				<th>Turning:</th>
-  				<td>$filler</td>
-  			</tr>
+			  			</tbody>
+			  		</table>
+			  	</div>
 
-  			<tr>
-  				<th>Acceleration:</th>
-  				<td>$filler</td>
-  				<th>Braking:</th>
-  				<td>$filler</td>
-  			</tr>
-
-  			</tbody>
-
-
-  		</table>
-  	</div>
-
-
-  	<div class="title">
-  		<h2>Coming Soon: Ability Tree
-  		</h2>
-  	</div>
-
-  	<div class="title">
-  		<h2> Coming Soon: Recent Activity</h2>
-  	</div>
-  	</div>
-  	</div>
-
+			  	<!-- Ability Tree Div -->
+			  	<div class="title">
+			  		<h2>Coming Soon: Ability Tree
+			  		</h2>
+			  	</div>
+			  	<!-- Recent Activity Feed -->
+			  	<div class="title">
+			  		<h2> Coming Soon: Recent Activity</h2>
+			  	</div>
+  			</div>
+  		</div>
 	</body>
 </html>

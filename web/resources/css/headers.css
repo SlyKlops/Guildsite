@@ -12,6 +12,8 @@
 	margin: auto;
 	background-image: url(../images/squishy.png);
 }
+
+/* Status Message Div Style */
 .status{
 	text-align: right;
 	width:75%;
@@ -19,6 +21,18 @@
 	min-width: 1000px;
 	margin: auto;
 }
+
+.status button{
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	font-size: 13px;
+	max-height: 40px;
+	margin: auto;
+}
+
 /*Navigation Bar Divs*/
 .NavBar{
 	text-align:center;
@@ -79,6 +93,20 @@
 .fuckTabitha li{
 	margin-bottom:10px; 
 	margin-left:300px;
+}
+
+/* User Table Div Styling */
+.userTable table{
+	margin-left: 75px;
+	border-style: solid;
+}
+
+.userTable tr, td{
+	min-width: 75px;
+	min-height: 75px;
+	padding: 10px;
+	text-align: right;
+	border-style: solid;
 }
 
 .body{
