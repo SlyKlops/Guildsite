@@ -97,7 +97,7 @@
 
 /* User Table Div Styling */
 .userTable table{
-	margin-left: 75px;
+	margin: 0 auto;
 	border-style: solid;
 }
 
