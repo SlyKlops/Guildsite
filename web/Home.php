@@ -24,8 +24,16 @@
                     <?php include 'navbar.html'; ?>
                 </div>
 
-				<div class="fuckTabitha">
+				<div class="Content">
 					<h3>Message of the Day</h3>
+				</div>
+
+				<div class="Content">
+					<table border="1" style="width: 100%;">
+						<thead>
+							<th>News Feed</th>
+						</thead>
+					</table>
 				</div>
 			</div>
 		</div>

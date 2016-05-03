@@ -24,7 +24,7 @@
 		            <?php include 'navbar.html'; ?>
 		        </div>
 		
-				<div class="fuckTabitha">
+				<div class="Content">
 					<!-- Registration Form -->
 					<h3><center>Registration</center></h3>
 						<form method="post" action="regform.php">

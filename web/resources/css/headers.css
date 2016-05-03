@@ -71,7 +71,7 @@
 }
 
 
-.fuckTabitha{
+.Content{
 	text-align:center;
 	 width:75%;
 	 position:relative;
@@ -84,13 +84,13 @@
 
 }
 
-.fuckTabitha ul{
+.Content ul{
 	list-style: none;
 	text-align: left;
 	width: 75%;
 }
 
-.fuckTabitha li{
+.Content li{
 	margin-bottom:10px; 
 	margin-left:300px;
 }

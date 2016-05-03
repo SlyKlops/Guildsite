@@ -25,7 +25,7 @@
                 </div>   	
 	   			
 	   			<!-- Character Table Div -->
-	   			<div class="fuckTabitha">
+	   			<div class="Content">
 	  				<table border="1" style="border: 5px solid black; width: 1000px">
 		  				<tbody>
 					  		<tr>
@@ -79,7 +79,7 @@
   				</div>
 
   				<!-- Featured Mount Div -->
-  				<div class="fuckTabitha">
+  				<div class="Content">
 			  		<table border="1" style="border: 5px solid black; width: 1000px;">
 			  			<tbody>
 				  			<tr>

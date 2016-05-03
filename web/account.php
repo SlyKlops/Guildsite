@@ -25,7 +25,7 @@
                     <?php include 'navbar.html'; ?>
                 </div>
 
-                <div class="fuckTabitha">
+                <div class="Content">
                     <h3><center>Account Page</center></h3>
                     <!-- User Account Table -->
                     <div class="userTable">

@@ -24,7 +24,7 @@
                     <?php include 'navbar.html'; ?>
                 </div>
 		
-				<div class="fuckTabitha">
+				<div class="Content">
 					<!-- Change Password Form-->
 					<h3><center>Change Password</center></h3>
 						<ul style = "list-style:none; text-align: left; width: 75%;">
