@@ -33,6 +33,14 @@
 						<thead>
 							<th>News Feed</th>
 						</thead>
+						<tbody>
+							<tr>
+								<td style="text-align: left; font-weight: bold;">Day One: Launch!</td>
+							</tr>
+							<tr>
+								<td style="display: inline-block;"><image src="resources/images/team.jpg" alt="TEAM PICTURE"></image></td>
+							</tr>
+						</tbody>
 					</table>
 				</div>
 			</div>

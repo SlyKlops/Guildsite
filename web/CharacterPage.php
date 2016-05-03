@@ -130,33 +130,33 @@
 			  			<tbody>
 				  			<tr>
 				  				<th colspan="4">Featured Mount</th>
-				  				<td rowspan="9" style = "width: 50px; height: 50px;" ><image src="resources/images/Whale_FullSize.png" alt="<Character Image>"></image></td>
+				  				<td rowspan="9" style = "width: 50px; height: 50px;" ><image src="resources/images/horse.png" alt="<Character Image>"></image></td>
 				  			</tr>
 
 				  			<tr>
 				  				<th>Name:</th>
-				  				<td>$filler</td>
+				  				<td>Rumplestiltskin</td>
 				  				<th>Level:</th>
-				  				<td>$filler</td>
+				  				<td>13</td>
 				  			</tr>
 
 				  			<tr>
 				  				<th>Gender:</th>
-				  				<td>$filler</td>
+				  				<td>Female</td>
 				  			</tr>
 
 				  			<tr>
 				  				<th>HP:</th>
-				  				<td>$filler</td>
+				  				<td>1800</td>
 				  			</tr>
 
 				  			<tr>
 				  				<th>Stamina:</th>
-				  				<td>$filler</td>
+				  				<td>80000</td>
 				  			</tr>
 				  			<tr>
 				  				<th>Max Weight:</th>
-				  				<td>$filler</td>
+				  				<td>250Lt</td>
 				  			</tr>
 				  			<tr>
 				  				<td colspan="4" ></td>
@@ -164,16 +164,16 @@
 
 				  			<tr>
 				  				<th>Max Speed:</th>
-				  				<td>$filler</td>
+				  				<td>121%</td>
 				  				<th>Turning:</th>
-				  				<td>$filler</td>
+				  				<td>119%</td>
 				  			</tr>
 
 				  			<tr>
 				  				<th>Acceleration:</th>
-				  				<td>$filler</td>
+				  				<td>121%</td>
 				  				<th>Braking:</th>
-				  				<td>$filler</td>
+				  				<td>119%</td>
 				  			</tr>
 
 			  			</tbody>

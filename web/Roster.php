@@ -104,7 +104,7 @@
                 while($data = mysql_fetch_row($result))
                 {   
                     echo "<tr>";
-                    echo '<td><a href="CharacterPage.php" style="color:black">'.$data[2].'</a></td>';
+                    echo '<td><a href=CharacterPage.php?charname='.urlencode($data[2]).' style="color:black">'.$data[2].'</a></td>';
                     echo "<td>".$data[4]."</td>";
                     echo "<td>0</td>";
                     echo "<td>100/150</td>";
