@@ -1,7 +1,7 @@
 -- MySQL Workbench Forward Engineering
 
-SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
-SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=1;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=1;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
@@ -30,24 +30,45 @@ CREATE TABLE IF NOT EXISTS `SLSite`.`USER` (
   `numPosts` INT NULL DEFAULT 0,
   `numThreads` INT NULL DEFAULT 0,
   `Intro_Statement` VARCHAR(255) NULL,
+  `Join_Date` DATE NULL,
+  `Last_Active` DATETIME DEFAULT NOW(),
   PRIMARY KEY (`ID`, `Username`))
-ENGINE = InnoDB;
+ENGINE = InnoDB
+AUTO_INCREMENT = 1;
 
 CREATE UNIQUE INDEX `Username_UNIQUE` ON `SLSite`.`USER` (`Username` ASC);
 
 CREATE UNIQUE INDEX `Email_UNIQUE` ON `SLSite`.`USER` (`Email` ASC);
 
+-- -----------------------------------------------------
+-- Table `SLSite`.`USER_FAMILY`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `SLSite`.`USER_FAMILY` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `USER_ID` INT NOT NULL,
+  `Family_Name` VARCHAR(45) NULL,
+  `Server` ENUM('Uno','Orwen','Edan') NULL,
+  PRIMARY KEY (`ID`, `USER_ID`),
+  CONSTRAINT `fk_User_Family`
+    FOREIGN KEY (`USER_ID`)
+    REFERENCES `SLSite`.`USER` (`ID`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+AUTO_INCREMENT = 1;
+
+CREATE INDEX `fk_User_Family_idx` ON `SLSite`.`USER_FAMILY` (`USER_ID` ASC);
 
 -- -----------------------------------------------------
 -- Table `SLSite`.`CHARACTERS`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `SLSite`.`CHARACTERS` (
-  `ID` INT NOT NULL,
+  `ID` INT NOT NULL AUTO_INCREMENT,
   `USER_ID` INT NOT NULL,
   `FAMILY_ID` INT NOT NULL,
   `Name` VARCHAR(45) NULL,
   `Title` VARCHAR(45) NULL,
-  `Class` ENUM('Witch','Wizard','Warrior','Valkyrie','Sorceress','Beserker','Tamer','Ninja','Kunoichi','Blader','Plum') NULL,
+  `Class` ENUM('Witch','Wizard','Warrior','Valkyrie','Sorceress','Berserker','Tamer','Ninja','Kunoichi','Blader','Plum') NULL,
   `Level` INT NULL,
   `Energy` INT NULL,
   `Contribution_Points` INT NULL,
@@ -57,7 +78,8 @@ CREATE TABLE IF NOT EXISTS `SLSite`.`CHARACTERS` (
     REFERENCES `SLSite`.`USER` (`ID`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+AUTO_INCREMENT = 1;
 
 CREATE INDEX `fk_User_Characters_idx` ON `SLSite`.`CHARACTERS` (`USER_ID` ASC);
 
@@ -68,7 +90,7 @@ CREATE INDEX `fk_User_Characters_idx` ON `SLSite`.`CHARACTERS` (`USER_ID` ASC);
 CREATE TABLE IF NOT EXISTS `SLSite`.`GUILD_MEMBERS` (
   `USER_ID` INT NOT NULL,
   `Contracted` TINYINT(1) NULL DEFAULT 0,
-  `Rank` ENUM('Master','Officer','Member') NULL DEFAULT '3',
+  `Rank` ENUM('Master','Officer','Member') NULL DEFAULT 'Member',
   `Activity_Points` INT NULL DEFAULT 0,
   PRIMARY KEY (`USER_ID`),
   CONSTRAINT `fk_User_GuildMembers`
@@ -83,7 +105,7 @@ ENGINE = InnoDB;
 -- Table `SLSite`.`THREADS`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `SLSite`.`THREADS` (
-  `ID` INT NOT NULL,
+  `ID` INT NOT NULL AUTO_INCREMENT,
   `POSTING_USER_ID` INT NULL,
   `RECENT_USER_ID` INT NULL,
   `Title` VARCHAR(255) NULL,
@@ -102,7 +124,8 @@ CREATE TABLE IF NOT EXISTS `SLSite`.`THREADS` (
     REFERENCES `SLSite`.`USER` (`ID`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+AUTO_INCREMENT = 1;
 
 CREATE INDEX `fk_Thread_User_Post_idx` ON `SLSite`.`THREADS` (`POSTING_USER_ID` ASC);
 
@@ -113,12 +136,12 @@ CREATE INDEX `fk_Thread_Recent_User_idx` ON `SLSite`.`THREADS` (`RECENT_USER_ID`
 -- Table `SLSite`.`POSTS`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `SLSite`.`POSTS` (
-  `ID` INT NULL,
+  `ID` INT NULL AUTO_INCREMENT,
   `THREAD_ID` INT NOT NULL,
   `POSTING_USER_ID` INT NULL,
   `Content` VARCHAR(255) NULL,
   `Time_Posted` TIMESTAMP NULL DEFAULT NOW(),
-  PRIMARY KEY (`THREAD_ID`),
+  PRIMARY KEY (`ID`,`THREAD_ID`),
   CONSTRAINT `fk_Posting_User_ID`
     FOREIGN KEY (`POSTING_USER_ID`)
     REFERENCES `SLSite`.`USER` (`ID`)
@@ -129,7 +152,8 @@ CREATE TABLE IF NOT EXISTS `SLSite`.`POSTS` (
     REFERENCES `SLSite`.`THREADS` (`ID`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
-ENGINE = InnoDB;
+ENGINE = InnoDB
+AUTO_INCREMENT = 1;
 
 CREATE INDEX `fk_Posting_User_ID_idx` ON `SLSite`.`POSTS` (`POSTING_USER_ID` ASC);
 
@@ -196,24 +220,6 @@ CREATE TABLE IF NOT EXISTS `SLSite`.`ONLINE_STATUS` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
-
--- -----------------------------------------------------
--- Table `SLSite`.`USER_FAMILY`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `SLSite`.`USER_FAMILY` (
-  `ID` INT NOT NULL,
-  `USER_ID` INT NOT NULL,
-  `Family_Name` VARCHAR(45) NULL,
-  `Server` ENUM('Uno','Orwen','Edan') NULL,
-  PRIMARY KEY (`ID`, `USER_ID`),
-  CONSTRAINT `fk_User_Family`
-    FOREIGN KEY (`USER_ID`)
-    REFERENCES `SLSite`.`USER` (`ID`)
-    ON DELETE CASCADE
-    ON UPDATE CASCADE)
-ENGINE = InnoDB;
-
-CREATE INDEX `fk_User_Family_idx` ON `SLSite`.`USER_FAMILY` (`USER_ID` ASC);
 
 USE `SLSite` ;
 
